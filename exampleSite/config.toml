@@ -3,7 +3,7 @@ baseurl = "https://example.com"
 disablePathToLower = false
 languageCode = "en-us"
 title = "Site title"
-theme = "Hugo-Octopress"
+theme = "hugo-octopress"
 
 # Needed so we can serve the example website without extra switches
 themesDir = "../.."
