@@ -7,7 +7,7 @@
       {{ if $paginator }}
         {{ range $paginator.Pages }}
         <article>
-          <!-- {{ .Scratch.Set "isHome" true }}  -->
+          {{ .Scratch.Set "isHome" true }} 
           {{ partial "post_header.html" . }}
           {{ if eq .Site.Params.truncate false }}
             {{ .Content }}
