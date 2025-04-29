@@ -229,7 +229,7 @@ body {
     color: #222
 }
 h1 {
-    font-size: 2.2em;
+    font-size: 1.6em;
     line-height: 1.2em
 }
 /* @media only screen and (min-width: 992px) {
@@ -1185,7 +1185,7 @@ article>footer p.meta {
     padding-bottom: 0
 }
 #content .blog-index article h1 {
-    font-size: 2.2em
+    font-size: 1.6em
 }
 #content .blog-index article h1 a {
     color: inherit
@@ -1423,7 +1423,7 @@ figure.code figcaption a:hover {
     display: none
 }
 #blog-archives h1 {
-    font-size: 1.5em
+    font-size: 1.4em
 }
 #blog-archives h1 a {
     text-decoration: none;
