@@ -249,7 +249,7 @@ h5,
 h6 {
     text-rendering: optimizelegibility;
     margin-bottom: 1em;
-    font-weight: bold;
+    font-weight: normal;
     margin-top: 1em;
 }
 h2,
@@ -265,7 +265,8 @@ h4,
 section h3,
 section section h2,
 section section section h1 {
-    font-size: 1em
+    font-size: 1em;
+    font-weight: bold;
 }
 h5,
 section h4,
