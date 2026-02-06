@@ -199,11 +199,6 @@ body>footer {
     /* font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif */
     font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
 }
-.serif,
-body,
-#content .blog-index a[rel=full-article] {
-    /* font-family: "PT Serif", Georgia, Times, "Times New Roman", serif */
-}
 .mono,
 pre,
 code,
@@ -447,7 +442,7 @@ aside.sidebar,
 #main,
 #content,
 .sidebar {
-    *zoom: 1
+    zoom: 1
 }
 .group:after,
 body>header:after,
@@ -465,7 +460,7 @@ body div.pagination:after,
 }
 body {
     -webkit-text-size-adjust: none;
-    max-width: 1200px; /* original is 1200px but for some reason it is smaller in my screen */
+    max-width: 1400px; /* original is 1200px but for some reason it is smaller in my screen */
     position: relative;
     margin: 0 auto;
     font-size: 110%;
@@ -869,7 +864,7 @@ body>nav ul {
         padding: 0;
         border: 0;
         overflow: hidden;
-        *zoom: 1;
+        zoom: 1;
         float: left;
         display: block;
         padding-top: .15em
@@ -1849,7 +1844,7 @@ h6 {
 
 /* Force gist linenos to be the same size as code linenos */
 .gist .blob-num {
-    font-size: 0.938em !important; 
+    font-size: 0.938em !important;
 }
 
 .gist .highlight, .gist .blob-code-inner {
@@ -1894,7 +1889,7 @@ h6 {
 .gist .pl-s, .gist .pl-pds, .gist .pl-s .pl-pse .pl-s1, .gist .pl-sr,
 .gist .pl-sr .pl-cce, .gist .pl-sr .pl-sre, .gist .pl-sr .pl-sra {
     color: #2aa198 !important;
-    
+
 }
 
 .gist .pl-s, .gist .pl-pds, .gist .pl-s .pl-pse .pl-s1, .gist .pl-sr,

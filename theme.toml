@@ -12,7 +12,6 @@ min_version = "0.63.0"
   name = "Parsia Hakimian"
   homepage = "https://parsiya.net"
 
-# If porting an existing theme
 [original]
   author = "Brandon Mathis"
   name = "Octopress classic theme"
