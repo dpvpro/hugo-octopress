@@ -77,10 +77,6 @@ Using an indented code block (no highlighting):
 	print b64encode(unhexlify("0a0b0c0d"))
 	CgsMDQ==
 
-In a Github gist:
-
-{{< gist parsiya 3c18b044bda63d34bdb83eddb66bee4c >}}
-
 **Go**
 
 {{< codecaption title="Go highlight" lang="go" >}}

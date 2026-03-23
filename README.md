@@ -79,7 +79,7 @@ To view the theme with the example site:
 
 ```
 cd themes/Hugo-Octopress/
-hugo serve -vw --source=exampleSite
+hugo serve -vw --source=demosite
 ```
 
 And view the example website at http://localhost:1313.
@@ -96,8 +96,8 @@ page with the theme's shortcodes.
 ## Configuration
 Hugo-Octopress can be configured by modifying the parameters in the
 [configuration file](https://gohugo.io/overview/configuration/). 
-[sample-config.toml](sample-config.toml) and
-[exampleSite/config.toml](exampleSite/config.toml) are both working examples.
+[sample.toml](sample.toml) and
+[demosite/config.toml](demosite/config.toml) are both working examples.
 
 ## Code highlight
 This theme uses the built-in [Chroma][chroma-link] highlighter with the

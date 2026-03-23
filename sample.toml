@@ -1,4 +1,3 @@
-
 baseurl = "https://example.com"
 disablePathToLower = false
 languageCode = "en-us"
@@ -51,7 +50,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 
   New paragraph
 
-  Another paragraph which has two spaces in the end to create a new line using markdown  
+  Another paragraph which has two spaces in the end to create a new line using markdown
   New line but not a new paragraph
   """
   # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
@@ -128,7 +127,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 
   # Remove or Set to false to use local fonts
   # remoteFonts = false
-  
+
   # Remove or set to false to use FontAwesome CDN, otherwise the theme uses ForkAwesome local fonts.
   # fontAwesome = false
 
@@ -142,7 +141,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   # Enable with this.
   # twitterCardEnabled = true
   # Don't include the @.
-  # twitterCardSite = 
+  # twitterCardSite =
   # twitterCardDomain = "parsiya.net"
   # Don't include the @.
   # twitterCardAuthor = "CryptoGangsta"
