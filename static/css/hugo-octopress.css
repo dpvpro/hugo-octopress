@@ -660,13 +660,13 @@ body>footer,
 body #content>article,
 body #content>div>article,
 body #content>div>section {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 body div.pagination {
-    margin-left: 18px;
-    margin-right: 18px;
+    margin-left: 55px;
+    margin-right: 55px;
 }
 
 /* --------------------------------------------------------------------------
@@ -675,7 +675,7 @@ body div.pagination {
 
 body>header {
     background: var(--color-bg-header);
-    font-size: 1em;
+    font-size: 1.3em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
 }
@@ -711,24 +711,30 @@ body>nav {
     border-bottom: 1px solid #8c8c8c;
     padding-top: .35em;
     padding-bottom: .35em;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto auto;
 }
 
 body>nav form {
     margin: 0;
     padding: 0;
+    justify-self: end;
 }
 
 body>nav form .search {
-    padding: .3em .5em 0;
-    font-size: .85em;
+    height: 38px;
+    font-size: 21px;
+    width: 232px;
+    padding: unset;
+    padding-left: 10px;
     font-family: var(--font-sans);
-    line-height: 1.1em;
-    width: 95%;
     border-radius: 0.5em;
-    box-shadow: #d1d1d1 0 1px;
-    background-color: var(--color-bg-body);
     border: 1px solid #b3b3b3;
+    background-color: var(--color-bg-body);
     color: #888;
+    box-shadow: #d1d1d1 0 1px;
+    box-sizing: border-box;
 }
 
 body>nav form .search:focus {
@@ -740,18 +746,71 @@ body>nav form .search:focus {
 }
 
 body>nav fieldset.mobile-nav {
-    float: left;
-    width: 48%;
+    display: none;
 }
 
 body>nav fieldset.mobile-nav select {
-    width: 100%;
-    font-size: .8em;
-    border: 1px solid #888;
+    height: 38px;
+    font-size: 21px;
+    padding: unset;
+    padding-left: 10px;
+    font-family: var(--font-sans);
+    border-radius: 0.5em;
+    border: 1px solid #b3b3b3;
+    background-color: var(--color-bg-body);
+    color: #888;
+    box-shadow: #d1d1d1 0 1px;
+    box-sizing: border-box;
+}
+
+body>nav fieldset.mobile-nav select:focus {
+    color: var(--color-text-light);
+    border-color: #80b1df;
+    box-shadow: #80b1df 0 0 4px, #80b1df 0 0 3px inset;
+    background-color: #fff;
+    outline: none;
 }
 
 body>nav ul {
-    display: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    display: block;
+}
+
+body>nav ul li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    white-space: nowrap;
+    display: inline;
+    float: left;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body>nav ul li:first-child,
+body>nav ul li.first {
+    padding-left: 0;
+}
+
+body>nav ul li:last-child,
+body>nav ul li.last {
+    padding-right: 0;
+}
+
+body>nav ul.subscription {
+    margin-left: .8em;
+    float: right;
+}
+
+body>nav ul.subscription li:last-child a {
+    padding-right: 0;
+}
+
+body>nav ul li {
+    margin: 0;
 }
 
 body>nav a {
@@ -773,45 +832,22 @@ body>nav a:hover {
     color: #2b2b2b;
 }
 
-/* Custom navigation styles */
-body>nav fieldset.mobile-nav {
-    width: 100%;
+body>nav li+li {
+    border-left: 1px solid #b0b0b0;
+    margin-left: .8em;
 }
 
-body>nav {
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto 1fr auto auto;
+body>nav li+li a {
+    padding-left: .8em;
+    border-left: 1px solid #dedede;
 }
 
-body>nav form {
-    justify-self: end;
-    padding-left: 20px;
+body>nav ul[data-subscription$=email]+form {
+    width: 147px;
 }
 
-body>nav fieldset.mobile-nav select,
-body>nav form .search {
-    height: 32px;
-    font-size: 21px;
-    padding: unset;
-    padding-left: 10px;
-    font-family: var(--font-sans);
-    border-radius: 0.5em;
-    border: 1px solid #b3b3b3;
-    background-color: var(--color-bg-body);
-    color: #888;
-    box-shadow: #d1d1d1 0 1px;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-body>nav fieldset.mobile-nav select:focus,
-body>nav form .search:focus {
-    color: var(--color-text-light);
-    border-color: #80b1df;
-    box-shadow: #80b1df 0 0 4px, #80b1df 0 0 3px inset;
-    background-color: #fff;
-    outline: none;
+body>nav ul[data-subscription$=email]+form .search {
+    width: 91%;
 }
 
 /* --------------------------------------------------------------------------
@@ -819,11 +855,21 @@ body>nav form .search:focus {
    -------------------------------------------------------------------------- */
 
 #content {
-    overflow: hidden;
+    overflow: visible;
+    margin-right: 320px;
+    position: relative;
+}
+
+.no-sidebar #content {
+    margin-right: 0;
+    border-right: 0;
 }
 
 #content>div,
 #content>article {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    float: left;
     width: 100%;
 }
 
@@ -846,7 +892,7 @@ body>footer {
     position: relative;
     padding-top: 1em;
     padding-bottom: 1em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     border-bottom-left-radius: 0.4em;
     border-bottom-right-radius: 0.4em;
     z-index: 1;
@@ -873,13 +919,27 @@ body>footer p:last-child {
    -------------------------------------------------------------------------- */
 
 aside.sidebar {
-    float: none;
-    padding: 0 18px 10px;
-    background-color: var(--color-bg-sidebar);
-    border-top: 1px solid var(--color-border);
+    width: 280px;
+    padding: 0em 20px 20px;
+    background: none;
+    clear: none;
+    float: left;
+    margin: 0 -100% 0 0;
     overflow: hidden;
     color: #4b4b4b;
     text-shadow: #fff 0 1px;
+}
+
+aside.sidebar section {
+    width: auto;
+    margin-left: 0;
+}
+
+aside.sidebar section.odd,
+aside.sidebar section.even {
+    float: none;
+    width: auto;
+    margin-left: 0;
 }
 
 
@@ -1420,10 +1480,10 @@ td.code {
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   8.1 Min-width: 768px (объединяет 480px, 550px, 750px, 768px)
+   8.1 Max-width: 1023px (Tablet)
    -------------------------------------------------------------------------- */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 1023px) {
     /* Header */
     body>header {
         font-size: 1.2em;
@@ -1445,82 +1505,38 @@ td.code {
         margin-right: 35px;
     }
 
-    /* Navigation */
+    /* Navigation - мобильная раскладка для планшета */
     body>nav {
         font-size: .9em;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    body>nav ul.main-navigation,
+    body>nav ul.subscription {
+        display: none;
+    }
+
+    body>nav fieldset.mobile-nav {
+        display: block;
+        width: 100%;
+    }
+
+    body>nav fieldset.mobile-nav select {
+        width: 100%;
+    }
+
+    body>nav form {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    body>nav form .search {
+        width: 100%;
     }
 
     body>nav ul {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        overflow: hidden;
-        float: left;
-        display: block;
-        padding-top: .15em;
-    }
-
-    body>nav ul li {
-        list-style-image: none;
-        list-style-type: none;
-        margin-left: 0;
-        white-space: nowrap;
-        display: inline;
-        float: left;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    body>nav ul li:first-child,
-    body>nav ul li.first {
-        padding-left: 0;
-    }
-
-    body>nav ul li:last-child,
-    body>nav ul li.last {
-        padding-right: 0;
-    }
-
-    body>nav ul.subscription {
-        margin-left: .8em;
-        float: right;
-    }
-
-    body>nav ul.subscription li:last-child a {
-        padding-right: 0;
-    }
-
-    body>nav ul li {
-        margin: 0;
-    }
-
-    body>nav a {
-        color: #6b6b6b;
-        font-family: var(--font-sans);
-        text-shadow: #ebebeb 0 1px;
-        float: left;
-        text-decoration: none;
-        font-size: 1.1em;
-        padding: .1em 0;
-        line-height: 1.5em;
-    }
-
-    body>nav a:visited {
-        color: #6b6b6b;
-    }
-
-    body>nav a:hover {
-        color: #2b2b2b;
-    }
-
-    body>nav li+li {
-        border-left: 1px solid #b0b0b0;
-        margin-left: .8em;
-    }
-
-    body>nav li+li a {
-        padding-left: .8em;
-        border-left: 1px solid #dedede;
+        padding-top: 0em;
     }
 
     body>nav ul[data-subscription$=email]+form {
@@ -1539,43 +1555,19 @@ td.code {
 
     /* Content */
     #content {
-        overflow: visible;
         margin-right: 240px;
-        position: relative;
-    }
-
-    .no-sidebar #content {
-        margin-right: 0;
-        border-right: 0;
     }
 
     #content>div,
     #content>article {
         padding-top: 17.5px;
         padding-bottom: 17.5px;
-        float: left;
     }
 
     /* Sidebar */
     aside.sidebar {
         width: 210px;
         padding: 0 15px 15px;
-        background: none;
-        clear: none;
-        float: left;
-        margin: 0 -100% 0 0;
-    }
-
-    aside.sidebar section {
-        width: auto;
-        margin-left: 0;
-    }
-
-    aside.sidebar section.odd,
-    aside.sidebar section.even {
-        float: none;
-        width: auto;
-        margin-left: 0;
     }
 
     /* Article header */
@@ -1584,101 +1576,79 @@ td.code {
         padding-bottom: 1em;
     }
 
-    body>nav ul {
-        padding-top: 0em;
+    article blockquote {
+        padding-left: 1.5em;
+        border-left-width: 4px;
     }
 }
 
 /* --------------------------------------------------------------------------
-   8.5 Min-width: 1024px
+   8.2 Max-width: 767px (Mobile)
    -------------------------------------------------------------------------- */
 
-@media only screen and (min-width: 1024px) {
-    body>header {
-        font-size: 1.3em;
-    }
-
+@media only screen and (max-width: 767px) {
+    /* Padding для контейнеров */
     body>header,
     body>nav,
     body>footer,
     body #content>article,
     body #content>div>article,
     body #content>div>section {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
     body div.pagination {
-        margin-left: 55px;
-        margin-right: 55px;
+        margin-left: 18px;
+        margin-right: 18px;
     }
 
-    #content {
-        margin-right: 320px;
+    /* Header */
+    body>header {
+        font-size: 1em;
     }
 
-    #content>div,
-    #content>article {
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-    }
-
-    aside.sidebar {
-        width: 280px;
-        padding: 0em 20px 20px;
-    }
-
-    body>nav form {
-        width: 240px;
-    }
-
-    body>nav ul[data-subscription$=email]+form {
-        width: 147px;
-    }
-
-    article blockquote {
-        padding-left: 1.5em;
-        border-left-width: 4px;
-    }
-
-    /* Скрыть мобильную навигацию */
-    body>nav fieldset.mobile-nav {
-        display: none;
-    }
-}
-
-/* --------------------------------------------------------------------------
-   8.7 Max-width: 1023px (Mobile)
-   -------------------------------------------------------------------------- */
-
-@media only screen and (max-width: 1023px) {
+    /* Navigation - мобильная раскладка */
     body>nav {
         grid-template-columns: 1fr 1fr;
         justify-items: center;
-    }
-
-    body>nav ul.main-navigation,
-    body>nav ul.subscription {
-        display: none;
     }
 
     body>nav fieldset.mobile-nav,
     body>nav form {
         width: 100%;
     }
+
+    /* Content */
+    #content {
+        margin-right: 0;
+    }
+
+    #content>div,
+    #content>article {
+        padding-top: 0;
+        padding-bottom: 0;
+        float: none;
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+        width: 100%;
+        padding: 0 18px 10px;
+        background-color: var(--color-bg-sidebar);
+        border-top: 1px solid var(--color-border);
+        float: none;
+        margin: 0;
+    }
+
+    article blockquote {
+        padding-left: 1em;
+        border-left-width: 4px;
+    }
 }
 
 /* --------------------------------------------------------------------------
-   8.8 Additional Styles
-   -------------------------------------------------------------------------- */
-
-hr.dashed {
-    border-top: 1px dashed #bbb;
-    margin-top: 24px;
-}
-
-/* --------------------------------------------------------------------------
-   8.6 Entry Content Headings
+   8.3 Entry Content Headings
    -------------------------------------------------------------------------- */
 
 div.entry-content > h1 {
@@ -1697,4 +1667,9 @@ h5,
 h6 {
     margin-bottom: 0.5em;
     margin-top: 0.8em;
+}
+
+hr.dashed {
+    border-top: 1px dashed #bbb;
+    margin-top: 24px;
 }
