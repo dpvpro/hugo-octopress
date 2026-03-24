@@ -640,20 +640,6 @@ figure a {
    4.1 Clearfix
    -------------------------------------------------------------------------- */
 
-.group,
-body>header,
-body>nav,
-body>footer,
-body #content>article,
-body #content>div>article,
-body #content>div>section,
-body div.pagination,
-aside.sidebar,
-#main,
-#content,
-.sidebar {
-}
-
 .group:after,
 body>header:after,
 body>nav:after,
@@ -1558,117 +1544,6 @@ td.code {
     padding-top: 0;
 }
 
-#blog-archives {
-    color: var(--color-text-meta);
-}
-
-#blog-archives article {
-    padding: 1em 0 1em;
-    position: relative;
-}
-
-#blog-archives article:last-child {
-    background: none;
-}
-
-#blog-archives article footer {
-    padding: 0;
-    margin: 0;
-}
-
-#blog-archives h1 {
-    color: var(--color-text);
-    margin-bottom: .3em;
-}
-
-#blog-archives h2 {
-    display: none;
-}
-
-#blog-archives h1 {
-    font-size: 1.4em;
-}
-
-#blog-archives h1 a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: normal;
-    display: inline-block;
-}
-
-#blog-archives h1 a:hover {
-    text-decoration: underline;
-    color: var(--color-hover);
-}
-
-#blog-archives a.category,
-#blog-archives time {
-    color: var(--color-text-meta);
-}
-
-#blog-archives .entry-content {
-    display: none;
-}
-
-#blog-archives time {
-    font-size: .9em;
-    line-height: 1.2em;
-}
-
-#blog-archives time .month,
-#blog-archives time .day {
-    display: inline-block;
-}
-
-#blog-archives time .month {
-    text-transform: uppercase;
-}
-
-#blog-archives p {
-    margin-bottom: 1em;
-}
-
-#blog-archives a,
-#blog-archives .entry-content a {
-    color: inherit;
-}
-
-#blog-archives a:hover,
-#blog-archives .entry-content a:hover {
-    color: var(--color-hover);
-}
-
-#blog-archives article {
-    margin-left: 5em;
-}
-
-#blog-archives h2 {
-    margin-bottom: 0.3em;
-    font-weight: normal;
-    display: inline-block;
-    position: relative;
-    top: -1px;
-    float: left;
-    margin-top: 1.7em;
-}
-public/
-#blog-archives time {
-    position: absolute;
-    text-align: right;
-    left: 0em;
-    top: 3em;
-    font-family: var(--font-sans);
-}
-
-#blog-archives article {
-    padding-left: 4.5em;
-    padding-bottom: .7em;
-}
-
-#blog-archives a.category {
-    line-height: 1.1em;
-}
-
 #content>.category article {
     margin-left: 0;
     padding-left: 6.8em;
@@ -1822,37 +1697,6 @@ public/
         width: 99%;
     }
 
-    #blog-archives article {
-        margin-left: 5em;
-    }
-
-    #blog-archives h2 {
-        margin-bottom: 0.3em;
-        font-weight: normal;
-        display: inline-block;
-        position: relative;
-        top: -1px;
-        float: left;
-        margin-top: 1.7em;
-    }
-
-    #blog-archives time {
-        position: absolute;
-        text-align: right;
-        left: 0em;
-        top: 3em;
-        font-family: var(--font-sans);
-    }
-
-    #blog-archives article {
-        padding-left: 4.5em;
-        padding-bottom: .7em;
-    }
-
-    #blog-archives a.category {
-        line-height: 1.1em;
-    }
-
     .maskImage body>nav ul[data-subscription$=email]+form {
         width: 123px;
     }
@@ -1903,8 +1747,6 @@ public/
    -------------------------------------------------------------------------- */
 
 @media only screen and (min-width: 768px) {
-    body {
-    }
 
     body>header {
         font-size: 1.2em;
