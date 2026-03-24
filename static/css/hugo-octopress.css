@@ -739,11 +739,6 @@ body>nav form .search:focus {
     outline: none;
 }
 
-body>nav fieldset[role=search] {
-    float: right;
-    width: 48%;
-}
-
 body>nav fieldset.mobile-nav {
     float: left;
     width: 48%;
@@ -1490,13 +1485,6 @@ td.code {
         border-left: 1px solid #dedede;
     }
 
-    body>nav form {
-        float: right;
-        text-align: left;
-        padding-left: .8em;
-        width: 175px;
-    }
-
     body>nav form .search {
         width: 93%;
         font-size: .95em;
@@ -1511,13 +1499,6 @@ td.code {
         width: 91%;
     }
 
-    body>nav fieldset.mobile-nav {
-        display: none;
-    }
-
-    body>nav fieldset[role=search] {
-        width: 99%;
-    }
 }
 
 /* --------------------------------------------------------------------------
