@@ -773,6 +773,47 @@ body>nav a:hover {
     color: #2b2b2b;
 }
 
+/* Custom navigation styles */
+body>nav fieldset.mobile-nav {
+    width: 100%;
+}
+
+body>nav {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto auto;
+}
+
+body>nav form {
+    justify-self: end;
+    padding-left: 20px;
+}
+
+body>nav fieldset.mobile-nav select,
+body>nav form .search {
+    height: 32px;
+    font-size: 21px;
+    padding: unset;
+    padding-left: 10px;
+    font-family: var(--font-sans);
+    border-radius: 0.5em;
+    border: 1px solid #b3b3b3;
+    background-color: var(--color-bg-body);
+    color: #888;
+    box-shadow: #d1d1d1 0 1px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body>nav fieldset.mobile-nav select:focus,
+body>nav form .search:focus {
+    color: var(--color-text-light);
+    border-color: #80b1df;
+    box-shadow: #80b1df 0 0 4px, #80b1df 0 0 3px inset;
+    background-color: #fff;
+    outline: none;
+}
+
 /* --------------------------------------------------------------------------
    4.5 Main Content
    -------------------------------------------------------------------------- */
@@ -906,6 +947,9 @@ article .caption-wrapper,
 aside.sidebar img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .basic-alignment.left,
@@ -1376,35 +1420,32 @@ td.code {
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   8.1 Min-width: 480px
+   8.1 Min-width: 768px (объединяет 480px, 550px, 750px, 768px)
    -------------------------------------------------------------------------- */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 768px) {
+    /* Header */
+    body>header {
+        font-size: 1.2em;
+    }
+
+    /* Padding для контейнеров */
     body>header,
     body>nav,
     body>footer,
     body #content>article,
     body #content>div>article,
     body #content>div>section {
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 
     body div.pagination {
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-}
-
-/* --------------------------------------------------------------------------
-   8.2 Min-width: 550px
-   -------------------------------------------------------------------------- */
-
-@media only screen and (min-width: 550px) {
-    body>header {
-        font-size: 1em;
+        margin-left: 35px;
+        margin-right: 35px;
     }
 
+    /* Navigation */
     body>nav {
         font-size: .9em;
     }
@@ -1435,10 +1476,7 @@ td.code {
         padding-left: 0;
     }
 
-    body>nav ul li:last-child {
-        padding-right: 0;
-    }
-
+    body>nav ul li:last-child,
     body>nav ul li.last {
         padding-right: 0;
     }
@@ -1485,12 +1523,6 @@ td.code {
         border-left: 1px solid #dedede;
     }
 
-    body>nav form .search {
-        width: 93%;
-        font-size: .95em;
-        line-height: 1.2em;
-    }
-
     body>nav ul[data-subscription$=email]+form {
         width: 97px;
     }
@@ -1499,78 +1531,13 @@ td.code {
         width: 91%;
     }
 
-}
-
-/* --------------------------------------------------------------------------
-   8.3 Min-width: 750px
-   -------------------------------------------------------------------------- */
-
-@media only screen and (min-width: 750px) {
-    aside.sidebar {
-        float: none;
-        width: auto;
-        clear: left;
-        margin: 0;
-        padding: 0 35px 1px;
-        background-color: var(--color-bg-sidebar);
-        border-top: 1px solid #eaeaea;
-    }
-
-    aside.sidebar section.odd,
-    aside.sidebar section.even {
-        float: left;
-        width: 48%;
-    }
-
-    aside.sidebar section.odd {
-        margin-left: 0;
-    }
-
-    aside.sidebar section.even {
-        margin-left: 4%;
-    }
-
-    aside.sidebar.thirds section {
-        width: 30%;
-        margin-left: 5%;
-    }
-
-    aside.sidebar.thirds section.first {
-        margin-left: 0;
-        clear: both;
-    }
-}
-
-/* --------------------------------------------------------------------------
-   8.4 Min-width: 768px
-   -------------------------------------------------------------------------- */
-
-@media only screen and (min-width: 768px) {
-
-    body>header {
-        font-size: 1.2em;
-    }
-
-    body>header,
-    body>nav,
-    body>footer,
-    body #content>article,
-    body #content>div>article,
-    body #content>div>section {
-        padding-left: 35px;
-        padding-right: 35px;
-    }
-
-    body div.pagination {
-        margin-left: 35px;
-        margin-right: 35px;
-    }
-
+    /* Main */
     #main {
         padding: 0;
         margin: 0 auto;
     }
 
+    /* Content */
     #content {
         overflow: visible;
         margin-right: 240px;
@@ -1589,6 +1556,7 @@ td.code {
         float: left;
     }
 
+    /* Sidebar */
     aside.sidebar {
         width: 210px;
         padding: 0 15px 15px;
@@ -1610,17 +1578,22 @@ td.code {
         margin-left: 0;
     }
 
+    /* Article header */
     article header {
-        margin-bottom: 1.5em;
+        margin-bottom: 0.7em;
         padding-bottom: 1em;
+    }
+
+    body>nav ul {
+        padding-top: 0em;
     }
 }
 
 /* --------------------------------------------------------------------------
-   8.5 Min-width: 992px
+   8.5 Min-width: 1024px
    -------------------------------------------------------------------------- */
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
     body>header {
         font-size: 1.3em;
     }
@@ -1656,7 +1629,7 @@ td.code {
     }
 
     body>nav form {
-        width: 215px;
+        width: 240px;
     }
 
     body>nav ul[data-subscription$=email]+form {
@@ -1667,6 +1640,41 @@ td.code {
         padding-left: 1.5em;
         border-left-width: 4px;
     }
+
+    /* Скрыть мобильную навигацию */
+    body>nav fieldset.mobile-nav {
+        display: none;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   8.7 Max-width: 1023px (Mobile)
+   -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1023px) {
+    body>nav {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    body>nav ul.main-navigation,
+    body>nav ul.subscription {
+        display: none;
+    }
+
+    body>nav fieldset.mobile-nav,
+    body>nav form {
+        width: 100%;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   8.8 Additional Styles
+   -------------------------------------------------------------------------- */
+
+hr.dashed {
+    border-top: 1px dashed #bbb;
+    margin-top: 24px;
 }
 
 /* --------------------------------------------------------------------------
