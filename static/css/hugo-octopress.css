@@ -725,7 +725,7 @@ body>nav form {
 body>nav form .search {
     height: 38px;
     font-size: 21px;
-    width: 232px;
+    width: 242px;
     padding: unset;
     padding-left: 10px;
     font-family: var(--font-sans);
@@ -854,10 +854,22 @@ body>nav ul[data-subscription$=email]+form .search {
    4.5 Main Content
    -------------------------------------------------------------------------- */
 
+#main {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 0 5px;
+    padding: 0;
+    margin: 0 auto;
+}
+
 #content {
     overflow: visible;
-    margin-right: 320px;
     position: relative;
+    min-width: 0;
+}
+
+.no-sidebar #main {
+    grid-template-columns: 1fr;
 }
 
 .no-sidebar #content {
@@ -869,13 +881,6 @@ body>nav ul[data-subscription$=email]+form .search {
 #content>article {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    float: left;
-    width: 100%;
-}
-
-#main {
-    padding: 0;
-    margin: 0 auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -919,12 +924,8 @@ body>footer p:last-child {
    -------------------------------------------------------------------------- */
 
 aside.sidebar {
-    width: 280px;
-    padding: 0em 20px 20px;
+    padding: 0em 10px 10px;
     background: none;
-    clear: none;
-    float: left;
-    margin: 0 -100% 0 0;
     overflow: hidden;
     color: #4b4b4b;
     text-shadow: #fff 0 1px;
@@ -1547,17 +1548,12 @@ td.code {
         width: 91%;
     }
 
-    /* Main */
+    /* Main - планшетная версия */
     #main {
-        padding: 0;
-        margin: 0 auto;
+        grid-template-columns: 1fr 260px;
     }
 
     /* Content */
-    #content {
-        margin-right: 240px;
-    }
-
     #content>div,
     #content>article {
         padding-top: 17.5px;
@@ -1566,8 +1562,7 @@ td.code {
 
     /* Sidebar */
     aside.sidebar {
-        width: 210px;
-        padding: 0 15px 15px;
+        padding: 0 10px 10px;
     }
 
     /* Article header */
@@ -1619,26 +1614,22 @@ td.code {
         width: 100%;
     }
 
-    /* Content */
-    #content {
-        margin-right: 0;
+    /* Main - мобильная версия: одна колонка, sidebar внизу */
+    #main {
+        grid-template-columns: 1fr;
     }
 
     #content>div,
     #content>article {
         padding-top: 0;
         padding-bottom: 0;
-        float: none;
     }
 
     /* Sidebar */
     aside.sidebar {
-        width: 100%;
         padding: 0 18px 10px;
         background-color: var(--color-bg-sidebar);
         border-top: 1px solid var(--color-border);
-        float: none;
-        margin: 0;
     }
 
     article blockquote {
