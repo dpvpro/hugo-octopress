@@ -714,7 +714,6 @@ body>nav {
 }
 
 body>nav form {
-    background-clip: padding-box;
     margin: 0;
     padding: 0;
 }
@@ -726,7 +725,6 @@ body>nav form .search {
     line-height: 1.1em;
     width: 95%;
     border-radius: 0.5em;
-    background-clip: padding-box;
     box-shadow: #d1d1d1 0 1px;
     background-color: var(--color-bg-body);
     border: 1px solid #b3b3b3;
@@ -1210,7 +1208,7 @@ h3.filename+pre {
 p code,
 li code {
     display: inline-block;
-    white-space: no-wrap;
+    white-space: nowrap;
     background: #fff;
     font-size: .8em;
     line-height: 1.5em;
@@ -1262,6 +1260,14 @@ pre::-webkit-scrollbar-thumb:horizontal,
 .gist-highlighttable::-webkit-scrollbar-thumb:horizontal {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
+}
+
+/* Современные стили скроллбара для Firefox и поддерживаемых браузеров */
+pre,
+.highlighttable,
+.gist-highlighttable {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.15);
 }
 
 /* --------------------------------------------------------------------------
