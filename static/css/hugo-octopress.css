@@ -722,10 +722,10 @@ body>nav form {
     justify-self: end;
 }
 
-body>nav form .search {
-    height: 38px;
+body>nav form .search,
+body>nav fieldset.mobile-nav select {
+    height: 33px;
     font-size: 21px;
-    width: 242px;
     padding: unset;
     padding-left: 10px;
     font-family: var(--font-sans);
@@ -737,7 +737,12 @@ body>nav form .search {
     box-sizing: border-box;
 }
 
-body>nav form .search:focus {
+body>nav form .search {
+    width: 242px;
+}
+
+body>nav form .search:focus,
+body>nav fieldset.mobile-nav select:focus {
     color: var(--color-text-light);
     border-color: #80b1df;
     box-shadow: #80b1df 0 0 4px, #80b1df 0 0 3px inset;
@@ -747,28 +752,6 @@ body>nav form .search:focus {
 
 body>nav fieldset.mobile-nav {
     display: none;
-}
-
-body>nav fieldset.mobile-nav select {
-    height: 38px;
-    font-size: 21px;
-    padding: unset;
-    padding-left: 10px;
-    font-family: var(--font-sans);
-    border-radius: 0.5em;
-    border: 1px solid #b3b3b3;
-    background-color: var(--color-bg-body);
-    color: #888;
-    box-shadow: #d1d1d1 0 1px;
-    box-sizing: border-box;
-}
-
-body>nav fieldset.mobile-nav select:focus {
-    color: var(--color-text-light);
-    border-color: #80b1df;
-    box-shadow: #80b1df 0 0 4px, #80b1df 0 0 3px inset;
-    background-color: #fff;
-    outline: none;
 }
 
 body>nav ul {
@@ -1661,6 +1644,6 @@ h6 {
 }
 
 hr.dashed {
-    border-top: 1px dashed #bbb;
+    border-top: 2px dashed #bbb;
     margin-top: 24px;
 }
